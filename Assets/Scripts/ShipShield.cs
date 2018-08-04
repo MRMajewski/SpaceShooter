@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class ShipShield : MonoBehaviour {
+public class ShipShield : MonoBehaviour, IUpgradable
+{
 
     [SerializeField]
     Sprite[] ShieldStates;
+
+
+
 
     private void Update()
     {
@@ -14,31 +18,61 @@ public class ShipShield : MonoBehaviour {
     }
 
 
-    int MaxLevel
-    {
-        get { return ShieldStates.Length - 1; }
-    }
-
-    int currentLevel = 0;
-    int CurrentLevel
-    {
-        get { return currentLevel; }
-        set
-        {
-            currentLevel = Mathf.Clamp(value, 0 , MaxLevel);
-            UpdateSprite();
-        }
-    }
 
     bool Active
     {
         get { return CurrentLevel > 0; }
     }
 
+    #region
+
+
+   public int MaxLevel
+    {
+        get { return ShieldStates.Length - 1; }
+    }
+
+    public  int CurrentLevel
+    {
+        get;private set;
+
+    }
+
+    public int UpgradeCost {
+        get { return CurrentLevel * 50 + 100; }
+    }
+
+    public void Upgrade()
+    {
+        CurrentLevel++;
+        Rebuild();
+    }
+    #endregion
+
+    int currentState = 0;
+    public int CurrentState
+    {
+        get { return currentState; }
+        set
+        {
+            currentState = Mathf.Clamp(value, 0, MaxLevel);
+            UpdateSprite();
+        }
+    }
+
+    private void Awake()
+    {
+        FindObjectOfType<AsteroidWaveController>().OnWaveStarted += _ => Rebuild();
+    }
+
     private void Start()
     {
-        CurrentLevel = MaxLevel;
-   
+        Rebuild();
+    }
+
+    public void Rebuild()
+    {
+        CurrentState = CurrentState;
     }
 
 
@@ -53,7 +87,7 @@ public class ShipShield : MonoBehaviour {
         if (!Active) //jeśli nieaktywna to nic sie nie dzieje
             return;
 
-        CurrentLevel--;
+        CurrentState--;
         Destroy(asteroid.gameObject);
     }
 
@@ -61,4 +95,5 @@ public class ShipShield : MonoBehaviour {
         {
             GetComponent<SpriteRenderer>().sprite = ShieldStates[CurrentLevel]; //wyłączamy sprite tarczy
         }
+
 }

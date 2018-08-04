@@ -2,19 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipGun : MonoBehaviour {
+public class ShipGun : MonoBehaviour, IUpgradable
+{
 
     [SerializeField]
     GameObject BullePrefab;
 
-    [SerializeField]
-    BulletType BulletType;
+    BulletType BulletType
+    {
+        get { return BulletTypes[CurrentLevel]; } //poziom broni jest skorelowany z indeksem broni w tablicy
+    }
+        
 
+    [SerializeField]
+    BulletType[] BulletTypes;
 
     float LastShootTime = 0f;
-	
-	// Update is called once per frame
-	void Update ()
+
+    //region grupuje nam częśc kodu specyficznie powiązaną z jedną funkcjonalnością
+    #region IUpgradable 
+
+    public int MaxLevel
+    {
+        get
+        {
+           return BulletTypes.Length-1;
+        }
+    }
+
+    public int CurrentLevel { get; set; }
+
+    public int UpgradeCost
+    {
+        get { return CurrentLevel * 50 + 25; }
+    }
+
+    public void Upgrade()
+    {
+        CurrentLevel++;
+    }
+
+    #endregion
+
+
+
+    // Update is called once per frame
+    void Update ()
     {
         if (!Input.GetMouseButton(0))
             return;
@@ -66,4 +99,6 @@ public class ShipGun : MonoBehaviour {
         return (Time.timeSinceLevelLoad - LastShootTime > BulletType.ShootingDuration);
         //mierzymy różnicę między czasem od początku gry do czasu ostatniego strzału
     }
+
+
 }

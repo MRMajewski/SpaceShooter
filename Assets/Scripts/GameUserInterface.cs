@@ -11,6 +11,12 @@ public class GameUserInterface : MonoBehaviour {
     [SerializeField]
     Text MoneyCounter;
 
+    [SerializeField]
+    Button ShieldUpgradeButton;
+
+    [SerializeField]
+    Button GunUpgradeButton;
+
     // Use this for initialization
     void Awake () {
 
@@ -22,6 +28,15 @@ public class GameUserInterface : MonoBehaviour {
         FindObjectOfType<AsteroidWaveController>().OnWaveStarted += waveNumber =>
         StartCoroutine(WaveCounterCoroutine(waveNumber));
 	}
+
+    void Start()
+    {
+        var shield = FindObjectOfType<ShipShield>();
+        ShieldUpgradeButton.GetComponent<UpgradeButton>().Configure(shield);
+
+        var gun = FindObjectOfType<ShipGun>();
+        GunUpgradeButton.GetComponent<UpgradeButton>().Configure(gun);
+    }
 
     private IEnumerator WaveCounterCoroutine(int waveNumber )
     {
