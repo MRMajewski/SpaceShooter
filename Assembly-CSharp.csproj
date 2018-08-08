@@ -76,11 +76,11 @@
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/IT/Unity/Projekty/StrefaKursow/SpaceShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>E:/IT/Unity/Projekty/StrefaKursow/SpaceShooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/IT/Unity/Projekty/StrefaKursow/SpaceShooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>E:/IT/Unity/Projekty/StrefaKursow/SpaceShooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>E:/IT/Unity/Projekty/StrefaKursow/SpaceShooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

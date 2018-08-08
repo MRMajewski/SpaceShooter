@@ -203,7 +203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &241927194
 MonoBehaviour:
@@ -371,10 +371,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 56
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 202
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0795f02fec962b94283ebc40fdea5005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: SHIELD
 --- !u!114 &269252459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +590,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.15453728, b: 0.4056604, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -675,7 +676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4363229563375042, guid: 2a43b9348a8de3848891e7ed58bba5ec, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114761040086760502, guid: 2a43b9348a8de3848891e7ed58bba5ec,
         type: 2}
@@ -1039,6 +1040,11 @@ Prefab:
       propertyPath: AsteroidTypes.Array.data[19].Points
       value: 140
       objectReference: {fileID: 0}
+    - target: {fileID: 114761040086760502, guid: 2a43b9348a8de3848891e7ed58bba5ec,
+        type: 2}
+      propertyPath: AsteroidSpawningTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a43b9348a8de3848891e7ed58bba5ec, type: 2}
   m_IsPrefabAsset: 0
@@ -1144,7 +1150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f71729ebe3c6a4f8b13b482a6fda2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaveDuration: 3
+  WaveDuration: 4
   CooldownDuration: 2
   BreakDuration: 2
 --- !u!4 &750263997
@@ -1512,10 +1518,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 56
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 202
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1533,6 +1539,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1305466214}
   m_CullTransparentMesh: 0
+--- !u!1001 &1500436244
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.28827453
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.57284015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710683834600682, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 455fce53d1705f14a9c8e199deb70fa7, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1513471186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0795f02fec962b94283ebc40fdea5005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: GUN
 --- !u!114 &1513471189
 MonoBehaviour:
   m_ObjectHideFlags: 0

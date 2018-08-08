@@ -72,7 +72,7 @@ public class ShipShield : MonoBehaviour, IUpgradable
 
     public void Rebuild()
     {
-        CurrentState = CurrentState;
+        CurrentState = CurrentLevel;
     }
 
 
@@ -93,7 +93,7 @@ public class ShipShield : MonoBehaviour, IUpgradable
 
      private void UpdateSprite()
         {
-            GetComponent<SpriteRenderer>().sprite = ShieldStates[CurrentLevel]; //wyłączamy sprite tarczy
+            GetComponent<SpriteRenderer>().sprite = ShieldStates[CurrentState]; //wyłączamy sprite tarczy
         }
 
 }
