@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class ShipGun : MonoBehaviour, IUpgradable
 {
+    [SerializeField]
+    AudioClip FireClip;
+
+    private AudioSource AudioSource;
 
     [SerializeField]
     GameObject BullePrefab;
@@ -44,7 +50,11 @@ public class ShipGun : MonoBehaviour, IUpgradable
 
     #endregion
 
-
+    private void Start()
+    {
+       AudioSource= GetComponent<AudioSource>();
+        AudioSource.clip = FireClip;
+    }
 
     // Update is called once per frame
     void Update ()
@@ -78,6 +88,9 @@ public class ShipGun : MonoBehaviour, IUpgradable
             ShootBullet(Vector3.right * 0.1f, Vector3.back * 15f);
 
         }
+
+       
+        GetComponent<AudioSource>().Play();
     }
 
     private void ShootBullet(Vector3 position, Vector3 rotation)
