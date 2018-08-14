@@ -19,6 +19,11 @@ public class AsteroidType
 public class Asteroid : MonoBehaviour {
 
     [SerializeField]
+    AudioClip DestroyClip;
+
+    private AudioSource AudioSource;
+
+    [SerializeField]
     float Durability = 6f;
 
     [SerializeField]
@@ -36,6 +41,9 @@ public class Asteroid : MonoBehaviour {
         SpriteRenderer = GetComponent<SpriteRenderer>();
 
         SetSpeed();
+
+        AudioSource = GetComponent<AudioSource>();
+        AudioSource.clip = DestroyClip;
     }
 
 
@@ -79,12 +87,18 @@ public class Asteroid : MonoBehaviour {
 
         if (Durability <= 0)
         {
+            GetComponent<AudioSource>().Play(); //efekt dźwiękowy
+
             //tworzymy efekt cząsteczkowy gdy asteroida jest zniszczona
             GenerateParticles(DestroyedParticles, transform.position);
+            GetComponent<Renderer>().enabled = false; //wyłączamy render i colider
+            GetComponent<Collider2D>().enabled = false;
 
             FindObjectOfType<GameManager>().Money += Points;
 
-            Destroy(gameObject);
+
+            Destroy(gameObject,DestroyClip.length); //dopiero jak skończy się efekt, obiekt jest niszczony
+
 
         }
            
