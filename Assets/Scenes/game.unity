@@ -224,27 +224,27 @@ MonoBehaviour:
   - CannonType: 0
     Sprite: {fileID: 21300000, guid: a4e2ab54973c8ba44be6ee87bfc9891a, type: 3}
     ShootingDuration: 0.3
-    Power: 1
+    Power: 0.75
     Speed: 5
   - CannonType: 0
     Sprite: {fileID: 21300000, guid: a4e2ab54973c8ba44be6ee87bfc9891a, type: 3}
     ShootingDuration: 0.25
-    Power: 1.5
+    Power: 0.75
     Speed: 7
   - CannonType: 1
     Sprite: {fileID: 21300000, guid: d0a1513dfa459ec4bb4c84c02ddc5496, type: 3}
     ShootingDuration: 0.3
-    Power: 2
+    Power: 1
     Speed: 9
   - CannonType: 1
     Sprite: {fileID: 21300000, guid: d0a1513dfa459ec4bb4c84c02ddc5496, type: 3}
     ShootingDuration: 0.25
-    Power: 2.5
+    Power: 1.5
     Speed: 6
   - CannonType: 2
     Sprite: {fileID: 21300000, guid: a9375811fbe2d5849a2868c4ad387d95, type: 3}
     ShootingDuration: 0.3
-    Power: 3
+    Power: 2
     Speed: 8
 --- !u!50 &241927195
 Rigidbody2D:
@@ -328,7 +328,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 293c10bc0d98d2d4d9de099410ccc1d6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.153
+  m_Volume: 0.065
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b557891551d780040aff395e190f9929, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: 269252460}
   - component: {fileID: 269252459}
   - component: {fileID: 269252458}
+  - component: {fileID: 269252462}
   m_Layer: 5
   m_Name: ShieldUpgradeButton
   m_TagString: Untagged
@@ -538,6 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0795f02fec962b94283ebc40fdea5005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuyClip: {fileID: 8300000, guid: caf3ac922055c4641bb7378b9dcec055, type: 3}
   Text: SHIELD
 --- !u!114 &269252459
 MonoBehaviour:
@@ -614,6 +616,101 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269252456}
   m_CullTransparentMesh: 0
+--- !u!82 &269252462
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269252456}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: caf3ac922055c4641bb7378b9dcec055, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 1
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &284842554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1237,7 @@ Prefab:
     - target: {fileID: 114761040086760502, guid: 2a43b9348a8de3848891e7ed58bba5ec,
         type: 2}
       propertyPath: AsteroidSpawningTime
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a43b9348a8de3848891e7ed58bba5ec, type: 2}
@@ -1182,7 +1279,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b557891551d780040aff395e190f9929, type: 3}
     m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
@@ -1247,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f71729ebe3c6a4f8b13b482a6fda2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaveDuration: 4
+  WaveDuration: 5
   CooldownDuration: 2
   BreakDuration: 2
 --- !u!4 &750263997
@@ -1387,6 +1484,7 @@ GameObject:
   - component: {fileID: 975034107}
   - component: {fileID: 975034106}
   - component: {fileID: 975034108}
+  - component: {fileID: 975034109}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -1484,6 +1582,102 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1435ab1989e34b648a7a726c578a3352, type: 3}
   - {fileID: 21300000, guid: b039c6d24ef3434408bf7e3df8a5fe37, type: 3}
   - {fileID: 21300000, guid: 5d54606624629d54f9abd5622fddd2db, type: 3}
+  ShieldClip: {fileID: 8300000, guid: 5cc8ac7fb99457b4a856c172589cdfc5, type: 3}
+--- !u!82 &975034109
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975034104}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5cc8ac7fb99457b4a856c172589cdfc5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.486
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1115641954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,7 +1715,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b557891551d780040aff395e190f9929, type: 3}
     m_FontSize: 89
     m_FontStyle: 0
     m_BestFit: 0
@@ -1614,7 +1808,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b557891551d780040aff395e190f9929, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -1690,6 +1884,7 @@ GameObject:
   - component: {fileID: 1513471190}
   - component: {fileID: 1513471189}
   - component: {fileID: 1513471188}
+  - component: {fileID: 1513471192}
   m_Layer: 5
   m_Name: GunUpgradeButton
   m_TagString: Untagged
@@ -1727,6 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0795f02fec962b94283ebc40fdea5005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuyClip: {fileID: 8300000, guid: caf3ac922055c4641bb7378b9dcec055, type: 3}
   Text: GUN
 --- !u!114 &1513471189
 MonoBehaviour:
@@ -1803,6 +1999,101 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513471186}
   m_CullTransparentMesh: 0
+--- !u!82 &1513471192
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1513471186}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: caf3ac922055c4641bb7378b9dcec055, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1755054767
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,9 +6,13 @@ using UnityEngine;
 public class ShipShield : MonoBehaviour, IUpgradable
 {
 
+    private AudioSource AudioSource;
+
     [SerializeField]
     Sprite[] ShieldStates;
 
+    [SerializeField]
+    AudioClip ShieldClip;
 
 
 
@@ -39,7 +43,7 @@ public class ShipShield : MonoBehaviour, IUpgradable
     }
 
     public int UpgradeCost {
-        get { return CurrentLevel * 50 + 100; }
+        get { return CurrentLevel * 50 + 150; }
     }
 
     public void Upgrade()
@@ -62,12 +66,15 @@ public class ShipShield : MonoBehaviour, IUpgradable
 
     private void Awake()
     {
-        FindObjectOfType<AsteroidWaveController>().OnWaveStarted += _ => Rebuild();
+        // FindObjectOfType<AsteroidWaveController>().OnWaveStarted += _ => Rebuild();
+        AudioSource= GetComponent<AudioSource>();
+        AudioSource.clip = ShieldClip;
+
     }
 
     private void Start()
     {
-        Rebuild();
+       Rebuild();
     }
 
     public void Rebuild()
@@ -88,7 +95,9 @@ public class ShipShield : MonoBehaviour, IUpgradable
             return;
 
         CurrentState--;
+        CurrentLevel--;
         Destroy(asteroid.gameObject);
+        AudioSource.Play();
     }
 
      private void UpdateSprite()

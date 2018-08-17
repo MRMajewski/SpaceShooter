@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class UpgradeButton : MonoBehaviour
 {
+
+    private AudioSource AudioSource;
+
+    [SerializeField]
+    AudioClip BuyClip;
+
     IUpgradable Upgradable;
     GameManager GameManager;
     Button Button;
@@ -15,6 +21,10 @@ public class UpgradeButton : MonoBehaviour
 
     void Awake()
     {
+        AudioSource = GetComponent<AudioSource>(); 
+        AudioSource.clip = BuyClip;
+
+
         GameManager = FindObjectOfType<GameManager>();
         Button = GetComponent<Button>();
 
@@ -39,6 +49,7 @@ public class UpgradeButton : MonoBehaviour
 
         Upgradable.Upgrade();
         GameManager.Money -= Upgradable.UpgradeCost;
+        AudioSource.Play();
         RefreshButton();
     }
 

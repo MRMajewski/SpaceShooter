@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
 
     void OnGameEnded()
     {
-        var points = FindObjectOfType<AsteroidWaveController>().CurrentWaveNumber * 10;
+       var points = FindObjectOfType<AsteroidWaveController>().CurrentWaveNumber * 10;
        GameState.SetCurrentResult(points); //nie tworzymy obiektu bo to klasa statyczna
 
         SceneManager.LoadScene("gameover");
