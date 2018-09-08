@@ -62,10 +62,11 @@ public class UpgradeButton : MonoBehaviour
 
         var textComponent = Button.GetComponentInChildren<Text>();
 
-        textComponent.text = string.Format("{0} ({1})", Text, Upgradable.CurrentLevel);
+        textComponent.text = string.Format("{0} ({1})", Text, Upgradable.CurrentLevel+1);
 
         if (!IsMaximumLevel())
             textComponent.text += string.Format("\n{0}$", Upgradable.UpgradeCost);
+        else textComponent.text = string.Format("{0} ({1})", Text, "MAX");
     }
 
     private bool CanUpgrade()

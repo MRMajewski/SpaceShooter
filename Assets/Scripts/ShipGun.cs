@@ -9,6 +9,9 @@ public class ShipGun : MonoBehaviour, IUpgradable
     [SerializeField]
     AudioClip FireClip;
 
+    [SerializeField]
+    Sprite[] GunLevels;
+
     private AudioSource AudioSource;
 
     [SerializeField]
@@ -40,12 +43,13 @@ public class ShipGun : MonoBehaviour, IUpgradable
 
     public int UpgradeCost
     {
-        get { return CurrentLevel * 125 + 100; }
+        get { return CurrentLevel * 50 + 50; }
     }
 
     public void Upgrade()
     {
         CurrentLevel++;
+        UpdateSprite();
     }
 
     #endregion
@@ -70,6 +74,11 @@ public class ShipGun : MonoBehaviour, IUpgradable
         LastShootTime = Time.timeSinceLevelLoad; //resetujemy czas strzału
     }
 
+    private void UpdateSprite()
+    {
+        GetComponent<SpriteRenderer>().sprite = GunLevels[CurrentLevel]; //wyłączamy sprite tarczy
+    }
+
     private void ShootBullets()
     {
         if(BulletType.CannonType==CannonType.Single)
@@ -77,15 +86,15 @@ public class ShipGun : MonoBehaviour, IUpgradable
 
        else if(BulletType.CannonType == CannonType.Double)
         {
-            ShootBullet(Vector3.left *0.1f,Vector3.forward *5f);
-            ShootBullet(Vector3.right * 0.1f, Vector3.back * 5f);
+            ShootBullet(Vector3.left *0.4f, Vector3.down *0.8f, Vector3.forward *2f);
+            ShootBullet(Vector3.right * 0.4f, Vector3.down * 0.8f, Vector3.back * 2f); ;
         }
 
        else if(BulletType.CannonType == CannonType.Triple)
         {
-            ShootBullet(Vector3.zero, Vector3.zero);
-            ShootBullet(Vector3.left * 0.1f, Vector3.forward * 15f);
-            ShootBullet(Vector3.right * 0.1f, Vector3.back * 15f);
+            ShootBullet(Vector3.down * 0.8f, Vector3.zero);
+            ShootBullet(Vector3.left * 0.4f, Vector3.down * 0.8f, Vector3.forward * 10f);
+            ShootBullet(Vector3.right * 0.4f, Vector3.down * 0.8f, Vector3.back * 10f); ;
 
         }
 
@@ -98,13 +107,27 @@ public class ShipGun : MonoBehaviour, IUpgradable
         //tworzymy obiekt i umieszczamy go na dziobie statku
         var bullet = Instantiate(
             BullePrefab,
-            transform.position+position+Vector3.up *0.5f,
+            transform.position+position+Vector3.up *1.2f,
             Quaternion.Euler(rotation));
 
 
         bullet.GetComponent<Bullet>().Configure(BulletType);
 
    
+    }
+
+    private void ShootBullet(Vector3 positionx, Vector3 positiony, Vector3 rotation)
+    {
+        //tworzymy obiekt i umieszczamy go na dziobie statku
+        var bullet = Instantiate(
+            BullePrefab,
+            transform.position + positionx +positiony +Vector3.up * 1.2f,
+            Quaternion.Euler(rotation));
+
+
+        bullet.GetComponent<Bullet>().Configure(BulletType);
+
+
     }
 
     private bool CanShootBullet()

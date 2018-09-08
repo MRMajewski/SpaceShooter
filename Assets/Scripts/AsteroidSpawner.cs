@@ -22,7 +22,7 @@ public class AsteroidSpawner : MonoBehaviour
 	// Use this for initialization
 	void Start () {
         AsteroidTypeLevel = 0;
-        AsteroidTypeRange = 5;
+        AsteroidTypeRange = 4;
 
         StartCoroutine(SpawningCoroutine());
 	}
