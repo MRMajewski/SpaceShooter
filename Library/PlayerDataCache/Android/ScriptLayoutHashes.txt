@@ -1,8 +1,8 @@
 Android
 PlayerPath?
-E:/IT/Unity/Projekty/StrefaKursow/SpaceShooter/SpaceShooter.apk
+E:/IT/Unity/Projekty/StrefaKursow/SpaceShooter/HeavyMetalSpaceShooter.apk
 SceneListBegin?
-Assets/Scenes/menu.unity
+Assets/Scenes/menu2.unity
 Assets/Scenes/game.unity
 Assets/Scenes/gameover.unity
 SceneListEnd?
