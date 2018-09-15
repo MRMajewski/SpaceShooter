@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\IUpgradable.cs" />
      <Compile Include="Assets\Scripts\LifetimeObject.cs" />
      <Compile Include="Assets\Scripts\Music.cs" />
+     <Compile Include="Assets\Scripts\PauseGame.cs" />
      <Compile Include="Assets\Scripts\Ship.cs" />
      <Compile Include="Assets\Scripts\ShipGun.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
