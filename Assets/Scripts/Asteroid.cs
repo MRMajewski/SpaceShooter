@@ -6,6 +6,7 @@ using UnityEngine;
 public class AsteroidType
 {
     public Sprite Sprite;
+  //  public PolygonCollider2D PolygonCollider;
     public float Durability;
 
     public int Points = 5;

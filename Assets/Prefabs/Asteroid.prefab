@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 50748755955745738}
   - component: {fileID: 114853452221685464}
   - component: {fileID: 114763151219556420}
-  - component: {fileID: 60907499109273776}
   - component: {fileID: 82988619824281080}
+  - component: {fileID: 60539412387669304}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1307012982920104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.093, y: 0.74, z: 0}
+  m_LocalPosition: {x: 0.02553995, y: 1.8295476, z: 0}
   m_LocalScale: {x: 1.5012872, y: 1.2491603, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60907499109273776
+--- !u!60 &60539412387669304
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,7 +81,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.01, y: 0.84}
+    oldSize: {x: 1.5538461, y: 1.2923077}
     newSize: {x: 1.01, y: 0.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -89,19 +89,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.405, y: -0.25}
-      - {x: 0.505, y: -0.04}
-      - {x: 0.505, y: 0.049999997}
-      - {x: 0.255, y: 0.42}
-      - {x: -0.345, y: 0.42}
-      - {x: -0.36499998, y: 0.41}
-      - {x: -0.505, y: 0.049999997}
-      - {x: -0.505, y: -0.14999999}
-      - {x: -0.24499999, y: -0.42}
-      - {x: -0.16499999, y: -0.42}
-      - {x: 0.114999995, y: -0.32}
-      - {x: 0.24499999, y: -0.37}
-      - {x: 0.39499998, y: -0.32999998}
+    - - {x: 0.6230769, y: -0.3846154}
+      - {x: 0.77692306, y: -0.06153846}
+      - {x: 0.77692306, y: 0.07692308}
+      - {x: 0.3923077, y: 0.64615387}
+      - {x: -0.4280172, y: 0.7010387}
+      - {x: -0.50445396, y: 0.58960545}
+      - {x: -0.6513371, y: 0.035759438}
+      - {x: -0.6513371, y: -0.20332672}
+      - {x: -0.37692308, y: -0.64615387}
+      - {x: -0.25384617, y: -0.64615387}
+      - {x: 0.17692308, y: -0.4923077}
+      - {x: 0.37692308, y: -0.5692308}
+      - {x: 0.6076923, y: -0.50769234}
 --- !u!82 &82988619824281080
 AudioSource:
   m_ObjectHideFlags: 1

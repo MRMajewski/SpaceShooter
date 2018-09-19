@@ -86,15 +86,15 @@ public class ShipGun : MonoBehaviour, IUpgradable
 
        else if(BulletType.CannonType == CannonType.Double)
         {
-            ShootBullet(Vector3.left *0.4f, Vector3.down *0.8f, Vector3.forward *2f);
-            ShootBullet(Vector3.right * 0.4f, Vector3.down * 0.8f, Vector3.back * 2f); ;
+            ShootBullet(Vector3.left *0.4f, Vector3.down *0.8f, Vector3.forward *1f);
+            ShootBullet(Vector3.right * 0.4f, Vector3.down * 0.8f, Vector3.back * 1f); ;
         }
 
        else if(BulletType.CannonType == CannonType.Triple)
         {
             ShootBullet(Vector3.down * 0.8f, Vector3.zero);
-            ShootBullet(Vector3.left * 0.4f, Vector3.down * 0.8f, Vector3.forward * 10f);
-            ShootBullet(Vector3.right * 0.4f, Vector3.down * 0.8f, Vector3.back * 10f); ;
+            ShootBullet(Vector3.left * 0.4f, Vector3.down * 0.8f, Vector3.forward * 2f);
+            ShootBullet(Vector3.right * 0.4f, Vector3.down * 0.8f, Vector3.back * 2f); ;
 
         }
 

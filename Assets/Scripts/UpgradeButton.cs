@@ -12,12 +12,21 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField]
     AudioClip BuyClip;
 
+    [SerializeField]
+    Image SpriteOfGun;
+
+
+    [SerializeField]
+    Sprite[] GunLevels;
+
     IUpgradable Upgradable;
     GameManager GameManager;
     Button Button;
 
     [SerializeField]
     string Text;
+
+    int CurrentLevel = 0;
 
     void Awake()
     {
@@ -28,12 +37,17 @@ public class UpgradeButton : MonoBehaviour
         GameManager = FindObjectOfType<GameManager>();
         Button = GetComponent<Button>();
 
-        var waveController = FindObjectOfType<AsteroidWaveController>();
+        Button.GetComponent<Image>().color = Color.gray;
+      //  var waveController = FindObjectOfType<AsteroidWaveController>();
 
-        waveController.OnWaveStarted += _ => gameObject.SetActive(false);
-        waveController.OnWaveEnded += _ => gameObject.SetActive(true);
+        //  waveController.OnWaveStarted += _ => gameObject.SetActive(false);
+        //  waveController.OnWaveEnded += _ => gameObject.SetActive(true);
 
         GameManager.OnMoneyChanged += _ => RefreshButton();
+  
+
+        SpriteOfGun.sprite = GunLevels[CurrentLevel]; //wyłączamy sprite tarczy
+
     }
 
     public void Configure(IUpgradable upgradable)
