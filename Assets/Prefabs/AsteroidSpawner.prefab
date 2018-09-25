@@ -8,18 +8,19 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1741788004994062}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1741788004994062
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4363229563375042}
   - component: {fileID: 114761040086760502}
+  - component: {fileID: 60105434877284038}
   m_Layer: 0
   m_Name: AsteroidSpawner
   m_TagString: Untagged
@@ -30,20 +31,50 @@ GameObject:
 --- !u!4 &4363229563375042
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1741788004994062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.051590502, y: -3.7764387, z: 0}
+  m_LocalPosition: {x: 0, y: 5.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60105434877284038
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741788004994062}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09422402, y: 0.38754225}
+      - {x: -0.2914877, y: -0.20921516}
+      - {x: 0.024672091, y: -0.008111954}
+      - {x: 0.08359908, y: -0.4321208}
+      - {x: -0.21311992, y: 0.22744942}
+      - {x: 0.33859926, y: -0.0678792}
 --- !u!114 &114761040086760502
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1741788004994062}
   m_Enabled: 1
@@ -51,6 +82,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1da1df14939934f9b194f79647030b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AsteroidPrefab: {fileID: 0}
-  AsteroidSpawningTime: 2
+  AsteroidTypes:
+  - Sprite: {fileID: 21300000, guid: 0e6d13ec3d8a43343a4de40f98f99ddd, type: 3}
+    Durability: 1
+    Points: 10
+  - Sprite: {fileID: 21300000, guid: bcd2f8e58fb1cb746b5bc87030937f42, type: 3}
+    Durability: 2
+    Points: 20
+  - Sprite: {fileID: 21300000, guid: 5665130757f5fb342b1396b0efc13f51, type: 3}
+    Durability: 3
+    Points: 30
+  - Sprite: {fileID: 21300000, guid: 48843f5ae94d0e549a65f9b0f0e44269, type: 3}
+    Durability: 4
+    Points: 40
+  - Sprite: {fileID: 21300000, guid: d6acfd65a0d9f194aa2bb6b1ba5be33f, type: 3}
+    Durability: 5
+    Points: 50
+  - Sprite: {fileID: 21300000, guid: c1944739bcd7ac549a7599ee00006990, type: 3}
+    Durability: 6
+    Points: 60
+  - Sprite: {fileID: 21300000, guid: e935b31bcc2dc2b479ad1f308221f350, type: 3}
+    Durability: 7
+    Points: 70
+  - Sprite: {fileID: 21300000, guid: eb9175452535c524582fe129ea7d5bfe, type: 3}
+    Durability: 8
+    Points: 80
+  - Sprite: {fileID: 21300000, guid: 3e4cb3d269299d647b58ad8764052c5e, type: 3}
+    Durability: 9
+    Points: 90
+  - Sprite: {fileID: 21300000, guid: 1e4c2dd515be08d47b650928fe9fd85a, type: 3}
+    Durability: 10
+    Points: 100
+  - Sprite: {fileID: 21300000, guid: f197788fc4b68ec4f888a025236ff082, type: 3}
+    Durability: 5
+    Points: 50
+  - Sprite: {fileID: 21300000, guid: fd9b48882b35947499f39c71f5574250, type: 3}
+    Durability: 6
+    Points: 60
+  - Sprite: {fileID: 21300000, guid: aa23b985463e12148aa16faf878809b7, type: 3}
+    Durability: 7
+    Points: 70
+  - Sprite: {fileID: 21300000, guid: 977955f29f51cc14caf92cb0adec7ab4, type: 3}
+    Durability: 8
+    Points: 80
+  - Sprite: {fileID: 21300000, guid: 3803c5f7b23194f43ae7b29a60222bc4, type: 3}
+    Durability: 9
+    Points: 90
+  - Sprite: {fileID: 21300000, guid: 7de1137b93614cb46a99fbfe776442ea, type: 3}
+    Durability: 10
+    Points: 100
+  - Sprite: {fileID: 21300000, guid: 7caa6cdad8555b14bbaba9d755958d6c, type: 3}
+    Durability: 11
+    Points: 110
+  - Sprite: {fileID: 21300000, guid: 9200832b8c08db143926e0198a832a3c, type: 3}
+    Durability: 12
+    Points: 120
+  - Sprite: {fileID: 21300000, guid: 95bcc846150259f45b4e1a0ac5ebc707, type: 3}
+    Durability: 13
+    Points: 130
+  - Sprite: {fileID: 21300000, guid: 4375252c3eb84b441bbb718df2c6e9d2, type: 3}
+    Durability: 14
+    Points: 140
+  AsteroidPrefab: {fileID: 1307012982920104, guid: 986a969e1e6cda64a8535450822bd942,
+    type: 2}
+  AsteroidSpawningTime: 1.5
   Spawning: 1

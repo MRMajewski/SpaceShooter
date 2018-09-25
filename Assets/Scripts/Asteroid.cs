@@ -32,6 +32,12 @@ public class Asteroid : MonoBehaviour {
     [SerializeField]
     GameObject DestroyedParticles;
 
+    [SerializeField]
+    float AngleMin = 0f;
+
+    [SerializeField]
+    float AngleMax = 0f;
+
     private int Points;
 
     private SpriteRenderer SpriteRenderer;
@@ -60,7 +66,8 @@ public class Asteroid : MonoBehaviour {
     public void SetSpeed()
     {
         var targetSpeed = Random.Range(2f, 4f);
-        GetComponent<Rigidbody2D>().velocity = Vector2.down * targetSpeed;
+        float Angle= Random.Range(AngleMin, AngleMax);
+        GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0f,0f,Angle) * Vector2.down * targetSpeed;
     }
 
 

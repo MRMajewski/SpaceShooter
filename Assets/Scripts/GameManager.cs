@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Money = 1000;
+        Money = 0;
 
     }
 

@@ -16,6 +16,8 @@ public class AsteroidWaveController : MonoBehaviour {
     [SerializeField]
     float BreakDuration = 5f;
 
+   // public float spawningTime;
+
     public event System.Action<int> OnWaveStarted;
     public event System.Action<int> OnWaveEnded;
 
@@ -23,13 +25,18 @@ public class AsteroidWaveController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         CurrentWaveNumber = 1;
+
         StartCoroutine(AsteroidWaveControllerCoroutine());
+      //   var spawningTime= FindObjectOfType<AsteroidSpawner>().AsteroidSpawningTime;
 		
 	}
 
     private IEnumerator AsteroidWaveControllerCoroutine()
     {
         var spawner = FindObjectOfType<AsteroidSpawner>();
+      //  var spawningTime = FindObjectOfType<AsteroidSpawner>().AsteroidSpawningTime;
+
+
 
         while (true)
         {
@@ -37,6 +44,8 @@ public class AsteroidWaveController : MonoBehaviour {
                 OnWaveStarted.Invoke(CurrentWaveNumber);
 
             spawner.AsteroidTypeLevel = CurrentWaveNumber;
+           
+
 
             spawner.Spawning = true; //włączamy tworzenie asteroidów tzn 'Wave"
 
@@ -51,6 +60,7 @@ public class AsteroidWaveController : MonoBehaviour {
             yield return new WaitForSeconds(BreakDuration); // czas trwania przerwy
 
             CurrentWaveNumber++;
+            //spawningTime = spawningTime + 3f;
 
 
 

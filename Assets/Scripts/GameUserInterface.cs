@@ -26,8 +26,9 @@ public class GameUserInterface : MonoBehaviour {
          };
 
         FindObjectOfType<AsteroidWaveController>().OnWaveStarted += waveNumber =>
-        StartCoroutine(WaveCounterCoroutine(waveNumber));
-	}
+      
+         StartCoroutine(WaveCounterCoroutine(waveNumber));
+    }
 
     void Start()
     {
@@ -40,11 +41,12 @@ public class GameUserInterface : MonoBehaviour {
 
     private IEnumerator WaveCounterCoroutine(int waveNumber )
     {
+
         WaveCounter.gameObject.SetActive(true);
         WaveCounter.text = "Wave: " + waveNumber.ToString();
 
         yield return new WaitForSeconds(2f);
         WaveCounter.gameObject.SetActive(false);
-    }
+    } 
 
 }
