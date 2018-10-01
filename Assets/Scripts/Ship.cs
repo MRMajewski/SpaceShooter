@@ -16,6 +16,18 @@ public class Ship : MonoBehaviour {
             return;
 
         if (OnShipDestroyed != null)
-            OnShipDestroyed.Invoke();
+
+            StartCoroutine(CoroutineDestroyShip());
+
+            OnShipDestroyed.Invoke(); //co to robi??
     }
+
+
+    IEnumerator CoroutineDestroyShip() // korutyna nie działa tyle ile ustawiam ;/
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(5f);
+    }
+
+
 }

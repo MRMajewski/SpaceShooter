@@ -102,13 +102,13 @@ MonoBehaviour:
     Durability: 6
     Points: 60
   - Sprite: {fileID: 21300000, guid: e935b31bcc2dc2b479ad1f308221f350, type: 3}
-    Durability: 7
+    Durability: 8
     Points: 70
   - Sprite: {fileID: 21300000, guid: eb9175452535c524582fe129ea7d5bfe, type: 3}
     Durability: 8
     Points: 80
   - Sprite: {fileID: 21300000, guid: 3e4cb3d269299d647b58ad8764052c5e, type: 3}
-    Durability: 9
+    Durability: 10
     Points: 90
   - Sprite: {fileID: 21300000, guid: 1e4c2dd515be08d47b650928fe9fd85a, type: 3}
     Durability: 10
@@ -132,16 +132,16 @@ MonoBehaviour:
     Durability: 10
     Points: 100
   - Sprite: {fileID: 21300000, guid: 7caa6cdad8555b14bbaba9d755958d6c, type: 3}
-    Durability: 11
+    Durability: 12
     Points: 110
   - Sprite: {fileID: 21300000, guid: 9200832b8c08db143926e0198a832a3c, type: 3}
     Durability: 12
     Points: 120
   - Sprite: {fileID: 21300000, guid: 95bcc846150259f45b4e1a0ac5ebc707, type: 3}
-    Durability: 13
+    Durability: 15
     Points: 130
   - Sprite: {fileID: 21300000, guid: 4375252c3eb84b441bbb718df2c6e9d2, type: 3}
-    Durability: 14
+    Durability: 15
     Points: 140
   AsteroidPrefab: {fileID: 1307012982920104, guid: 986a969e1e6cda64a8535450822bd942,
     type: 2}

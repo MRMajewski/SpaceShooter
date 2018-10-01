@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 [System.Serializable]
 public class AsteroidType
@@ -95,18 +96,7 @@ public class Asteroid : MonoBehaviour {
 
         if (Durability <= 0)
         {
-            GetComponent<AudioSource>().Play(); //efekt dźwiękowy
-
-            //tworzymy efekt cząsteczkowy gdy asteroida jest zniszczona
-            GenerateParticles(DestroyedParticles, transform.position);
-            GetComponent<Renderer>().enabled = false; //wyłączamy render i colider
-            GetComponent<Collider2D>().enabled = false;
-
-            FindObjectOfType<GameManager>().Money += Points;
-
-
-            Destroy(gameObject,DestroyClip.length); //dopiero jak skończy się efekt, obiekt jest niszczony
-
+            StartCoroutine(DestroyCoroutine());
 
         }
            
@@ -119,4 +109,24 @@ public class Asteroid : MonoBehaviour {
         particles.GetComponent<ParticleSystemRenderer>().material.mainTexture =
            SpriteRenderer.sprite.texture;
     }
+
+    IEnumerator DestroyCoroutine()
+    {
+        GetComponent<AudioSource>().Play(); //efekt dźwiękowy
+
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        //tworzymy efekt cząsteczkowy gdy asteroida jest zniszczona
+        GenerateParticles(DestroyedParticles, transform.position);
+
+        GetComponent<Renderer>().enabled = false; //wyłączamy render i colider
+        GetComponent<Collider2D>().enabled = false;
+
+        FindObjectOfType<GameManager>().Money += Points;
+
+        CameraShaker.Instance.ShakeOnce(3, 7, 0.5f, 0.5f);
+        Destroy(gameObject, DestroyClip.length); //dopiero jak skończy się efekt, obiekt jest niszczony
+
+    }
+
 }

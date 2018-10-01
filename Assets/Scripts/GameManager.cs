@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+
+
+    [SerializeField]
+    GameObject DestroyedParticles;
+
     private int money = 0;
     public int Money
     {
@@ -23,6 +28,8 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
+
+        var ship = FindObjectOfType<Ship>();
        // Money = 0;
         //subskrybujemy zdarzenie z skryptu Ship
         // FindObjectOfType<Ship>().OnShipDestroyed += () => SceneManager.LoadScene("gameover");
@@ -42,4 +49,6 @@ public class GameManager : MonoBehaviour {
 
         SceneManager.LoadScene("gameover");
     }
+
+
 }
