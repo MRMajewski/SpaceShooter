@@ -79,7 +79,7 @@ public class ShipGun : MonoBehaviour, IUpgradable
         GetComponent<SpriteRenderer>().sprite = GunLevels[CurrentLevel]; //wyłączamy sprite tarczy
     }
 
-    private void ShootBullets()
+    public void ShootBullets()
     {
         if(BulletType.CannonType==CannonType.Single)
         ShootBullet(Vector3.zero, Vector3.zero);
@@ -102,7 +102,7 @@ public class ShipGun : MonoBehaviour, IUpgradable
         GetComponent<AudioSource>().Play();
     }
 
-    private void ShootBullet(Vector3 position, Vector3 rotation)
+    public void ShootBullet(Vector3 position, Vector3 rotation)
     {
         //tworzymy obiekt i umieszczamy go na dziobie statku
         var bullet = Instantiate(
@@ -116,7 +116,7 @@ public class ShipGun : MonoBehaviour, IUpgradable
    
     }
 
-    private void ShootBullet(Vector3 positionx, Vector3 positiony, Vector3 rotation)
+    public void ShootBullet(Vector3 positionx, Vector3 positiony, Vector3 rotation)
     {
         //tworzymy obiekt i umieszczamy go na dziobie statku
         var bullet = Instantiate(
