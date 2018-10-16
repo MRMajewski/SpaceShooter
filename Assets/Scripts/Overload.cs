@@ -10,11 +10,11 @@ using UnityEngine.UI;
 public class Overload : MonoBehaviour
 {
 
-    [SerializeField]
-    Canvas canvas;
+ //   [SerializeField]
+  //  Canvas canvas;
 
-    [SerializeField]
-    Button Overloadbutton;
+//    [SerializeField]
+//    Button Overloadbutton;
 
 
 
@@ -37,10 +37,10 @@ public class Overload : MonoBehaviour
            }
        }
        */
-
     void Awake()
     {
         SetSpeed();
+      //  var Overloadbutton = FindObjectOfType<OverloadButton>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,10 +56,11 @@ public class Overload : MonoBehaviour
 
             //    canvas.enabled = true;
 
-            GetComponent<Button>().gameObject.SetActive(true);
-
-          //  Overloadbutton.interactable = true;
-          //  FindObjectOfType<OverloadButton>().
+         //   FindObjectOfType<OverloadButton>().GetComponent<Button>().gameObject.SetActive(true);
+            //gameObject.SetActive(true);
+            FindObjectOfType<OverloadButton>().GetComponent<Button>().interactable = true;
+            //  Overloadbutton.interactable = true;
+            //  FindObjectOfType<OverloadButton>().
 
             //    FindObjectOfType<Ship>().GetComponent<SpriteRenderer>().color    = Color.black; to działa ale enabled buttona nie ;/
         }

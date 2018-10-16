@@ -27,7 +27,7 @@ public class OverloadSpawner : MonoBehaviour {
             while (true)//sprawdzamy czy asteroidy mają być generowane
             {
                 SpawnOverload();
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(8f);
             }
             yield return new WaitForEndOfFrame();//czekamy do następnej klatki żeby nie obciążać cpu
 
@@ -40,7 +40,6 @@ public class OverloadSpawner : MonoBehaviour {
         var obj = Instantiate(OverloadPrefab, transform.position, Quaternion.identity);
         obj.transform.position += Vector3.right * Random.Range(-2f, 2f);
 
-   
     }
 
 }

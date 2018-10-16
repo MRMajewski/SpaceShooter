@@ -107,8 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145c9e04c5df9a849bc7b1e4e8989a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  Overloadbutton: {fileID: 0}
 --- !u!114 &114924081959921226
 MonoBehaviour:
   m_ObjectHideFlags: 1
