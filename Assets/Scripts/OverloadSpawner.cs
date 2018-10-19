@@ -18,7 +18,6 @@ public class OverloadSpawner : MonoBehaviour {
 		
 	}
 
-
     IEnumerator SpawningCoroutine()
     {
 
@@ -33,7 +32,6 @@ public class OverloadSpawner : MonoBehaviour {
 
         }
     }
-
 
     private void SpawnOverload()
     {

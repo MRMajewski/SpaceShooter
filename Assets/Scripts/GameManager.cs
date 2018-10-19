@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 
-
     [SerializeField]
-    GameObject DestroyedParticles;
+    GameObject SpawnerPrefab;
 
     private int money = 0;
     public int Money
@@ -28,7 +27,7 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
-
+       
         var ship = FindObjectOfType<Ship>();
        // Money = 0;
         //subskrybujemy zdarzenie z skryptu Ship
@@ -40,6 +39,12 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         Money = 0;
 
+    }
+    
+    void Update()
+    {
+        var waveNumber = FindObjectOfType<AsteroidWaveController>().CurrentWaveNumber;
+        if (waveNumber == 2) Instantiate(SpawnerPrefab);
     }
 
     void OnGameEnded()

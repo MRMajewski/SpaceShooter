@@ -11,8 +11,10 @@ public class Ship : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var asteroid = collision.gameObject.GetComponent<Asteroid>();
+        var homingEnemy = collision.gameObject.GetComponent<HomingEnemy>();
 
-        if (asteroid == null)
+        if (homingEnemy == null && asteroid == null)
+
             return;
 
         if (OnShipDestroyed != null)
