@@ -36,7 +36,7 @@ public class AsteroidSpawner : MonoBehaviour
             while(Spawning)//sprawdzamy czy asteroidy mają być generowane
             {
                 SpawnAsteroid();
-                yield return new WaitForSeconds(AsteroidSpawningTime/currentWave);
+                yield return new WaitForSeconds(AsteroidSpawningTime);
 
 
             }

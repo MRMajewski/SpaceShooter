@@ -214,8 +214,8 @@ MonoBehaviour:
     type: 2}
   DestroyedParticles: {fileID: 1050398338084260, guid: 6e4116878681e544cbba4b91d57b796d,
     type: 2}
-  AngleMin: -20
-  AngleMax: 20
+  AngleMin: -15
+  AngleMax: 15
 --- !u!114 &114527382196967948
 MonoBehaviour:
   m_ObjectHideFlags: 1

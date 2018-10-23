@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\ShipGun.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
      <Compile Include="Assets\Scripts\ShipShield.cs" />
+     <Compile Include="Assets\Scripts\SpawnersController.cs" />
      <Compile Include="Assets\Scripts\UpgradeButton.cs" />
      <None Include="Assets\Graphics\uipack_fixed\Spritesheet\redSheet.xml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

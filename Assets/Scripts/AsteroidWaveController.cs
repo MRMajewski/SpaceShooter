@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidWaveController : MonoBehaviour {
+public class AsteroidWaveController : MonoBehaviour
+{
 
     public int CurrentWaveNumber { get; private set; }
 
@@ -16,25 +17,26 @@ public class AsteroidWaveController : MonoBehaviour {
     [SerializeField]
     float BreakDuration = 5f;
 
-   // public float spawningTime;
+    // public float spawningTime;
 
     public event System.Action<int> OnWaveStarted;
     public event System.Action<int> OnWaveEnded;
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         CurrentWaveNumber = 1;
 
         StartCoroutine(AsteroidWaveControllerCoroutine());
-      //   var spawningTime= FindObjectOfType<AsteroidSpawner>().AsteroidSpawningTime;
-		
-	}
+        //   var spawningTime= FindObjectOfType<AsteroidSpawner>().AsteroidSpawningTime;
+
+    }
 
     private IEnumerator AsteroidWaveControllerCoroutine()
     {
         var spawner = FindObjectOfType<AsteroidSpawner>();
-      //  var spawningTime = FindObjectOfType<AsteroidSpawner>().AsteroidSpawningTime;
+        //  var spawningTime = FindObjectOfType<AsteroidSpawner>().AsteroidSpawningTime;
 
 
 
@@ -44,7 +46,7 @@ public class AsteroidWaveController : MonoBehaviour {
                 OnWaveStarted.Invoke(CurrentWaveNumber);
 
             spawner.AsteroidTypeLevel = CurrentWaveNumber;
-           
+
 
 
             spawner.Spawning = true; //włączamy tworzenie asteroidów tzn 'Wave"
