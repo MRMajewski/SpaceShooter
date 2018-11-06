@@ -14,7 +14,13 @@ public class EnemyType
 
     public int Points = 5;
 
+    public float Speed = 1f;
+
 }
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 
 public class HomingEnemy : MonoBehaviour {
 
@@ -41,6 +47,8 @@ public class HomingEnemy : MonoBehaviour {
 
     private int Points;
 
+
+
     private SpriteRenderer SpriteRenderer;
 
     float targetSpeed;
@@ -59,7 +67,7 @@ public class HomingEnemy : MonoBehaviour {
     // Use this for initialization
     void Start () {
        ship = FindObjectOfType<Ship>();
-       targetSpeed = Random.Range(1f, 2.5f);
+      // targetSpeed = Random.Range(1f, 2.5f);
     }
 	
 	// Update is called once per frame
@@ -82,6 +90,8 @@ public class HomingEnemy : MonoBehaviour {
         Durability = enemyType.Durability;
 
         Points = enemyType.Points;
+
+        targetSpeed = enemyType.Speed;
     }
 
 

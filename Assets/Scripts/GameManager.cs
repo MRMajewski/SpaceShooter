@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-
-    [SerializeField]
-    GameObject SpawnerPrefab;
-
     private int money = 0;
     public int Money
     {
@@ -39,7 +35,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Money = 0;
+        Money = 300;
 
     }
 

@@ -7,6 +7,12 @@ public class OverloadSpawner : MonoBehaviour {
     [SerializeField]
     GameObject OverloadPrefab;
 
+    [SerializeField]
+    float MinSpawnTime=7f;
+
+    [SerializeField]
+    float MaxSpawnTime = 15f;
+
 
     // Use this for initialization
     void Start () {
@@ -26,7 +32,7 @@ public class OverloadSpawner : MonoBehaviour {
             while (true)//sprawdzamy czy asteroidy mają być generowane
             {
                 SpawnOverload();
-                yield return new WaitForSeconds(8f);
+                yield return new WaitForSeconds(Random.Range(MinSpawnTime, MaxSpawnTime));
             }
             yield return new WaitForEndOfFrame();//czekamy do następnej klatki żeby nie obciążać cpu
 

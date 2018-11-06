@@ -43,7 +43,7 @@ public class ShipShield : MonoBehaviour, IUpgradable
     }
 
     public int UpgradeCost {
-        get { return CurrentLevel * 50 + 150; }
+        get { return CurrentLevel * 50 + 200; }
     }
 
     public void Upgrade()
@@ -87,16 +87,23 @@ public class ShipShield : MonoBehaviour, IUpgradable
     {
         //sprawdzamy czy zderzenie nastąpiło z asteroidą, poniżej pobieramy komponent
         var asteroid = collision.gameObject.GetComponent<Asteroid>();
+        var enemy = collision.gameObject.GetComponent<HomingEnemy>();
+        var overload = collision.gameObject.GetComponent<Overload>();
 
-        if (asteroid == null)
+        if (asteroid == null &&
+            enemy==null)
             return;
+        if (overload != null) return;
 
         if (!Active) //jeśli nieaktywna to nic sie nie dzieje
             return;
 
         CurrentState--;
         CurrentLevel--;
-        Destroy(asteroid.gameObject);
+
+        if(asteroid !=null) Destroy(asteroid.gameObject);
+        if(enemy !=null) Destroy(enemy.gameObject); ;
+
         AudioSource.Play();
     }
 

@@ -57,58 +57,58 @@ MonoBehaviour:
     Points: 10
   - Sprite: {fileID: 21300000, guid: bcd2f8e58fb1cb746b5bc87030937f42, type: 3}
     Durability: 2
-    Points: 20
+    Points: 15
   - Sprite: {fileID: 21300000, guid: 5665130757f5fb342b1396b0efc13f51, type: 3}
     Durability: 3
-    Points: 30
+    Points: 20
   - Sprite: {fileID: 21300000, guid: 48843f5ae94d0e549a65f9b0f0e44269, type: 3}
     Durability: 4
-    Points: 40
+    Points: 30
   - Sprite: {fileID: 21300000, guid: d6acfd65a0d9f194aa2bb6b1ba5be33f, type: 3}
     Durability: 5
-    Points: 50
+    Points: 40
   - Sprite: {fileID: 21300000, guid: c1944739bcd7ac549a7599ee00006990, type: 3}
     Durability: 6
-    Points: 60
+    Points: 50
   - Sprite: {fileID: 21300000, guid: e935b31bcc2dc2b479ad1f308221f350, type: 3}
     Durability: 10
-    Points: 70
+    Points: 60
   - Sprite: {fileID: 21300000, guid: eb9175452535c524582fe129ea7d5bfe, type: 3}
     Durability: 10
-    Points: 80
+    Points: 70
   - Sprite: {fileID: 21300000, guid: 3e4cb3d269299d647b58ad8764052c5e, type: 3}
     Durability: 12
-    Points: 90
+    Points: 70
   - Sprite: {fileID: 21300000, guid: 1e4c2dd515be08d47b650928fe9fd85a, type: 3}
     Durability: 12
-    Points: 100
+    Points: 80
   - Sprite: {fileID: 21300000, guid: f197788fc4b68ec4f888a025236ff082, type: 3}
     Durability: 5
-    Points: 50
+    Points: 20
   - Sprite: {fileID: 21300000, guid: fd9b48882b35947499f39c71f5574250, type: 3}
     Durability: 6
-    Points: 60
+    Points: 30
   - Sprite: {fileID: 21300000, guid: aa23b985463e12148aa16faf878809b7, type: 3}
     Durability: 7
-    Points: 70
+    Points: 40
   - Sprite: {fileID: 21300000, guid: 977955f29f51cc14caf92cb0adec7ab4, type: 3}
     Durability: 8
-    Points: 80
+    Points: 40
   - Sprite: {fileID: 21300000, guid: 3803c5f7b23194f43ae7b29a60222bc4, type: 3}
     Durability: 9
-    Points: 90
+    Points: 50
   - Sprite: {fileID: 21300000, guid: 7de1137b93614cb46a99fbfe776442ea, type: 3}
     Durability: 10
-    Points: 100
+    Points: 60
   - Sprite: {fileID: 21300000, guid: 7caa6cdad8555b14bbaba9d755958d6c, type: 3}
     Durability: 18
-    Points: 110
+    Points: 70
   - Sprite: {fileID: 21300000, guid: 9200832b8c08db143926e0198a832a3c, type: 3}
     Durability: 18
-    Points: 120
+    Points: 100
   - Sprite: {fileID: 21300000, guid: 95bcc846150259f45b4e1a0ac5ebc707, type: 3}
     Durability: 21
-    Points: 130
+    Points: 100
   - Sprite: {fileID: 21300000, guid: 4375252c3eb84b441bbb718df2c6e9d2, type: 3}
     Durability: 21
     Points: 140

@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1476440763639528}
+  m_RootGameObject: {fileID: 1450619487731152}
   m_IsPrefabAsset: 1
---- !u!1 &1476440763639528
+--- !u!1 &1450619487731152
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4229632222718468}
-  - component: {fileID: 114991813746739422}
+  - component: {fileID: 4468159038855192}
+  - component: {fileID: 114952609898260634}
   m_Layer: 0
-  m_Name: SpawneController
+  m_Name: SpawneController 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4229632222718468
+  m_IsActive: 1
+--- !u!4 &4468159038855192
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1476440763639528}
+  m_GameObject: {fileID: 1450619487731152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,16 +40,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114991813746739422
+--- !u!114 &114952609898260634
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1476440763639528}
+  m_GameObject: {fileID: 1450619487731152}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87d421a1b628d4d49b598c79a7903b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnerPrefab: {fileID: 1880131586529074, guid: 837137361c43d5b45b6dbe527e982558,
+  EnemySpawnerPrefab: {fileID: 1887081935631258, guid: c75bbb97b0157df4b8884e45d9a1c47c,
     type: 2}
+  OverloadSpawnerPrefab: {fileID: 1880131586529074, guid: 837137361c43d5b45b6dbe527e982558,
+    type: 2}
+  AsteroidAngledSpawnerPrefab: {fileID: 1764734653140934, guid: 21dad21bf4ac7524682ee60db01c8c65,
+    type: 2}
+  OverloadWaveNumber: 3
+  EnemyWaveNumber: 4
+  AsteroidAngledWaveNumber: 1
+  WaveDuration: 9.2

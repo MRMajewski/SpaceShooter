@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\GameState.cs" />
      <Compile Include="Assets\Scripts\GameUserInterface.cs" />
      <Compile Include="Assets\Scripts\HomingEnemy.cs" />
+     <Compile Include="Assets\Scripts\HomingEnemySpawner.cs" />
      <Compile Include="Assets\Scripts\IUpgradable.cs" />
      <Compile Include="Assets\Scripts\LifetimeObject.cs" />
      <Compile Include="Assets\Scripts\Music.cs" />

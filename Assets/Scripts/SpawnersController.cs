@@ -5,10 +5,22 @@ using UnityEngine;
 public class SpawnersController : MonoBehaviour {
 
     [SerializeField]
-    GameObject SpawnerPrefab;
+    GameObject EnemySpawnerPrefab;
 
     [SerializeField]
-    int WaveNumber=3;
+    GameObject OverloadSpawnerPrefab;
+
+    [SerializeField]
+    GameObject AsteroidAngledSpawnerPrefab;
+
+    [SerializeField]
+    int OverloadWaveNumber=3;
+
+    [SerializeField]
+    int EnemyWaveNumber = 3;
+
+    [SerializeField]
+    int AsteroidAngledWaveNumber = 3;
 
     [SerializeField]
     float WaveDuration=9.2f;
@@ -18,26 +30,53 @@ public class SpawnersController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+    /*  var  WaveDuration = FindObjectOfType<AsteroidWaveController>().WaveDuration+
+            FindObjectOfType<AsteroidWaveController>().CooldownDuration+
+            FindObjectOfType<AsteroidWaveController>().BreakDuration;
 
-        StartCoroutine(SpawnerControllerCoroutine());
+    */
+        StartCoroutine(EnemySpawnerControllerCoroutine());
+        StartCoroutine(OverloadSpawnerControllerCoroutine());
+        StartCoroutine(AsteroidAngledSpawnerControllerCoroutine());
         //   var spawningTime= FindObjectOfType<AsteroidSpawner>().AsteroidSpawningTime;
 
     }
 
-    private IEnumerator SpawnerControllerCoroutine()
+    private IEnumerator EnemySpawnerControllerCoroutine()
     {
-     
-        while (true)
-        {   
-       
-           // if (CurrentWaveNumber > 2)
-             
-
-            yield return new WaitForSeconds(WaveDuration*WaveNumber); //czas trwania Wave
-            Instantiate(SpawnerPrefab);
-
-            //  CurrentWaveNumber++;
+        while(true)
+        {
+            yield return new WaitForSeconds(WaveDuration * EnemyWaveNumber); //czas trwania Wave
+            Instantiate(EnemySpawnerPrefab);
+            yield return new WaitForSeconds(WaveDuration * 10); //czas trwania Wave
         }
+       
+    }
+
+    private IEnumerator OverloadSpawnerControllerCoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(WaveDuration * OverloadWaveNumber); //czas trwania Wave
+            Instantiate(OverloadSpawnerPrefab);
+            {
+                yield return new WaitForSeconds(WaveDuration * 15);
+            }
+        }
+     
+
+    }
+
+    private IEnumerator AsteroidAngledSpawnerControllerCoroutine()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(WaveDuration * AsteroidAngledWaveNumber); //czas trwania Wave
+            Instantiate(AsteroidAngledSpawnerPrefab);
+            yield return new WaitForSeconds(WaveDuration * 20);
+        }
+     
+
     }
 
 }

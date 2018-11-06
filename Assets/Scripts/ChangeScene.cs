@@ -7,16 +7,30 @@ public class ChangeScene : MonoBehaviour {
 
     [SerializeField]
     string SceneName = "";
-	
-	// Update is called once per frame
-	void Update () {
 
+    // Update is called once per frame
+    void Update() {
+        ChangesScene();
+
+
+    }
+
+    public void GameOverChangeScene()
+    {
+                SceneManager.LoadScene("game");
+    }
+
+
+
+        public void ChangesScene()
+    {
         if (Input.GetMouseButtonDown(0))
             if (!string.IsNullOrEmpty(SceneName))
                 SceneManager.LoadScene(SceneName);
 
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
-		
-	}
+
+    }
+
 }

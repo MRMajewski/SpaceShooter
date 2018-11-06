@@ -8,14 +8,14 @@ public class AsteroidWaveController : MonoBehaviour
     public int CurrentWaveNumber { get; private set; }
 
 
-    [SerializeField]
-    float WaveDuration = 20f;
+  //  [SerializeField]
+    public float WaveDuration = 20f;
 
-    [SerializeField]
-    float CooldownDuration = 1f;
+  //  [SerializeField]
+   public float CooldownDuration = 1f;
 
-    [SerializeField]
-    float BreakDuration = 5f;
+ //   [SerializeField]
+   public float BreakDuration = 5f;
 
     // public float spawningTime;
 
