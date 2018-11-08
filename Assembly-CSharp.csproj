@@ -61,6 +61,19 @@
      <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakePresets.cs" />
      <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShaker.cs" />
      <Compile Include="Assets\EZ Camera Shake\Scripts\Utilities\CameraUtilities.cs" />
+     <Compile Include="Assets\FingersLite\Demo\DemoAsteroidScript.cs" />
+     <Compile Include="Assets\FingersLite\Demo\DemoScript.cs" />
+     <Compile Include="Assets\FingersLite\Script\FingersScript.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\DeviceInfo.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\GestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\LongPressGestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\OneTouchRotateGestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\OneTouchScaleGestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\PanGestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\RotateGestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\ScaleGestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\SwipeGestureRecognizer.cs" />
+     <Compile Include="Assets\FingersLite\Script\Gestures\TapGestureRecognizer.cs" />
      <Compile Include="Assets\Scripts\Asteroid.cs" />
      <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
      <Compile Include="Assets\Scripts\AsteroidWaveController.cs" />
@@ -89,6 +102,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Graphics\uipack_fixed\Spritesheet\greySheet.xml" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\FingersLite\ChangeLog.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Graphics\uipack_fixed\license.txt" />
      <None Include="Assets\Graphics\uipack_fixed\Spritesheet\yellowSheet.xml" />
@@ -105,6 +119,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\FingersLite\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />

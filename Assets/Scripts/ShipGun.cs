@@ -63,8 +63,8 @@ public class ShipGun : MonoBehaviour, IUpgradable
     // Update is called once per frame
     void Update ()
     {
-        if (!Input.GetMouseButton(0))
-            return;
+     //   if (!Input.GetMouseButton(0))
+       //     return;
       
 
         if (!CanShootBullet())
@@ -82,7 +82,7 @@ public class ShipGun : MonoBehaviour, IUpgradable
     public void ShootBullets()
     {
         if(BulletType.CannonType==CannonType.Single)
-        ShootBullet(Vector3.zero, Vector3.zero);
+        ShootBullet(Vector3.up*(-0.75f), Vector3.zero);
 
        else if(BulletType.CannonType == CannonType.Double)
         {

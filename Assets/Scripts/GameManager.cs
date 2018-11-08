@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Money = 300;
+        Money = 0;
 
     }
 
