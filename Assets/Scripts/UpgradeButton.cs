@@ -12,8 +12,8 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField]
     AudioClip BuyClip;
 
-    [SerializeField]
-    Image SpriteOfGun;
+   // [SerializeField]
+  //  Image SpriteOfGun;
 
 
     [SerializeField]
@@ -46,7 +46,7 @@ public class UpgradeButton : MonoBehaviour
         GameManager.OnMoneyChanged += _ => RefreshButton();
   
 
-        SpriteOfGun.sprite = GunLevels[CurrentLevel]; //wyłączamy sprite tarczy
+       // SpriteOfGun.sprite = GunLevels[CurrentLevel]; //wyłączamy sprite tarczy
 
     }
 
@@ -65,6 +65,7 @@ public class UpgradeButton : MonoBehaviour
         GameManager.Money -= Upgradable.UpgradeCost;
         AudioSource.Play();
         RefreshButton();
+    
     }
 
     private void RefreshButton()

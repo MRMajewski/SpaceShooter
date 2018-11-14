@@ -43,7 +43,7 @@ public class ShipShield : MonoBehaviour, IUpgradable
     }
 
     public int UpgradeCost {
-        get { return CurrentLevel * 50 + 200; }
+        get { return CurrentLevel * 75 + 200; }
     }
 
     public void Upgrade()

@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
+    public Text CountdownText;
 
     private int money = 0;
     public int Money
@@ -24,18 +27,23 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-
+      //  Spawner.gameObject.SetActive(false);
         var ship = FindObjectOfType<Ship>();
         // Money = 0;
         //subskrybujemy zdarzenie z skryptu Ship
         // FindObjectOfType<Ship>().OnShipDestroyed += () => SceneManager.LoadScene("gameover");
         FindObjectOfType<Ship>().OnShipDestroyed += () => OnGameEnded();
+        StartCoroutine(CountdownCoroutine());
     }
 
     // Use this for initialization
     void Start()
     {
         Money = 0;
+
+
+     
+
 
     }
 
@@ -53,5 +61,24 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("gameover");
     }
 
+    IEnumerator CountdownCoroutine() //korutyna odliczania do startu
+    {
+       
+      
+        CountdownText.enabled = true; //tekst z odliczaniem
+
+        for (int i = 3; i > 0; i--) //odliczanie
+        {
+            CountdownText.text = i.ToString();
+            yield return new WaitForSeconds(0.5f); //czekanie sekundy
+        }
+
+        CountdownText.text = "GO!"; 
+
+        yield return new WaitForSeconds(1f);
+
+        CountdownText.enabled = false; // wyłączamy tekst
+     
+    }
 
 }

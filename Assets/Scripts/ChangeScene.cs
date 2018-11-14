@@ -20,9 +20,15 @@ public class ChangeScene : MonoBehaviour {
                 SceneManager.LoadScene("game");
     }
 
+    public void GameOverQuit()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
 
 
-        public void ChangesScene()
+
+    public void ChangesScene()
     {
         if (Input.GetMouseButtonDown(0))
             if (!string.IsNullOrEmpty(SceneName))

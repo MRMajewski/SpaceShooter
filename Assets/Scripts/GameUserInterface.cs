@@ -39,6 +39,7 @@ public class GameUserInterface : MonoBehaviour {
         GunUpgradeButton.GetComponent<UpgradeButton>().Configure(gun);
     }
 
+
     private IEnumerator WaveCounterCoroutine(int waveNumber )
     {
 

@@ -22,7 +22,7 @@ public class AsteroidSpawner : MonoBehaviour
 	// Use this for initialization
 	void Start () {
         AsteroidTypeLevel = 0;
-        AsteroidTypeRange = 4;
+        AsteroidTypeRange = 3;
 
         StartCoroutine(SpawningCoroutine());
 	}
@@ -31,7 +31,9 @@ public class AsteroidSpawner : MonoBehaviour
     {
         int currentWave = FindObjectOfType<AsteroidWaveController>().CurrentWaveNumber;
 
-        while(true)//nieskończona pętla zapewnia że korutyna się nie skończy
+        yield return new WaitForSeconds(1.5f);
+
+        while (true)//nieskończona pętla zapewnia że korutyna się nie skończy
         {
             while(Spawning)//sprawdzamy czy asteroidy mają być generowane
             {

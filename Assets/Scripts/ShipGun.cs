@@ -43,7 +43,7 @@ public class ShipGun : MonoBehaviour, IUpgradable
 
     public int UpgradeCost
     {
-        get { return CurrentLevel * 50 + 100; }
+        get { return CurrentLevel * 75 + 125; }
     }
 
     public void Upgrade()

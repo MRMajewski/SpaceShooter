@@ -53,3 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OverloadPrefab: {fileID: 1984809223286540, guid: c35e049838b85c643934946743193828,
     type: 2}
+  MinSpawnTime: 10
+  MaxSpawnTime: 18
