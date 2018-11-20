@@ -26,6 +26,10 @@ public class ChangeScene : MonoBehaviour {
             Application.Quit();
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 
     public void ChangesScene()

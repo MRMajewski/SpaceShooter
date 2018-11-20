@@ -45,7 +45,7 @@ public class AsteroidWaveController : MonoBehaviour
             if (OnWaveStarted != null)
                 OnWaveStarted.Invoke(CurrentWaveNumber);
 
-            spawner.AsteroidTypeLevel = CurrentWaveNumber;
+            spawner.AsteroidTypeLevel = CurrentWaveNumber-1;
 
 
 

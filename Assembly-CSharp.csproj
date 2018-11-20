@@ -106,6 +106,12 @@
      <Compile Include="Assets\Scripts\ShipShield.cs" />
      <Compile Include="Assets\Scripts\SpawnersController.cs" />
      <Compile Include="Assets\Scripts\UpgradeButton.cs" />
+     <Compile Include="Assets\Virtual Joystick Pack\Examples\2D Example\Player2DExample.cs" />
+     <Compile Include="Assets\Virtual Joystick Pack\Examples\3D Example\Player3DExample.cs" />
+     <Compile Include="Assets\Virtual Joystick Pack\Scripts\Base\Joystick.cs" />
+     <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+     <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <None Include="Assets\Graphics\uipack_fixed\Spritesheet\redSheet.xml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Graphics\uipack_fixed\Spritesheet\greySheet.xml" />

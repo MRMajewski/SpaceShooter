@@ -55,9 +55,9 @@ MonoBehaviour:
     type: 2}
   OverloadSpawnerPrefab: {fileID: 1880131586529074, guid: 837137361c43d5b45b6dbe527e982558,
     type: 2}
-  AsteroidAngledSpawnerPrefab: {fileID: 1764734653140934, guid: 21dad21bf4ac7524682ee60db01c8c65,
+  AsteroidAngledSpawnerPrefab: {fileID: 1930115849282858, guid: 21dad21bf4ac7524682ee60db01c8c65,
     type: 2}
-  OverloadWaveNumber: 3
-  EnemyWaveNumber: 4
+  OverloadWaveNumber: 5
+  EnemyWaveNumber: 6
   AsteroidAngledWaveNumber: 1
   WaveDuration: 9.2

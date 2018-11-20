@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4363229563375042}
   - component: {fileID: 114761040086760502}
-  - component: {fileID: 60105434877284038}
   m_Layer: 0
   m_Name: AsteroidSpawner
   m_TagString: Untagged
@@ -41,36 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60105434877284038
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1741788004994062}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.09422402, y: 0.38754225}
-      - {x: -0.2914877, y: -0.20921516}
-      - {x: 0.024672091, y: -0.008111954}
-      - {x: 0.08359908, y: -0.4321208}
-      - {x: -0.21311992, y: 0.22744942}
-      - {x: 0.33859926, y: -0.0678792}
 --- !u!114 &114761040086760502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,67 +52,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AsteroidTypes:
-  - Sprite: {fileID: 21300000, guid: 219a59eec08d03746934b34c7c01d28a, type: 3}
-    Durability: 1
-    Points: 10
-  - Sprite: {fileID: 21300000, guid: 78e780a734c7a364cad9f8bdd981fd13, type: 3}
-    Durability: 2
-    Points: 15
-  - Sprite: {fileID: 21300000, guid: b3d94329f68bd0f47b511b852bad2507, type: 3}
-    Durability: 3
-    Points: 20
-  - Sprite: {fileID: 21300000, guid: 31a8c955ddcd24246815f45d935a4213, type: 3}
-    Durability: 4
-    Points: 30
-  - Sprite: {fileID: 21300000, guid: 9f0ee4241d73a634daf6cfc156834ac6, type: 3}
-    Durability: 5
-    Points: 40
-  - Sprite: {fileID: 21300000, guid: 57ae4c6c05e7adb40af4c7945ecb3f0a, type: 3}
-    Durability: 6
-    Points: 50
-  - Sprite: {fileID: 21300000, guid: 74e99281f0abc1a49b450f7868656f9c, type: 3}
-    Durability: 8
-    Points: 60
-  - Sprite: {fileID: 21300000, guid: f432c4c2a62afc24e917f46d271f6aca, type: 3}
-    Durability: 8
-    Points: 70
-  - Sprite: {fileID: 21300000, guid: 5550de451cd382541bdc5afb6b5137de, type: 3}
-    Durability: 10
-    Points: 80
-  - Sprite: {fileID: 21300000, guid: b66df275c1b14f8419ff5b2230eeb9fd, type: 3}
-    Durability: 10
-    Points: 80
-  - Sprite: {fileID: 21300000, guid: f0298c99feb087444b36b4b6e35a1b3c, type: 3}
-    Durability: 5
-    Points: 20
-  - Sprite: {fileID: 21300000, guid: ca0c5d0fd38f3fc4b9648271ac73b261, type: 3}
-    Durability: 6
-    Points: 30
-  - Sprite: {fileID: 21300000, guid: 808c658a4ab746a4b81b896a6cd0d091, type: 3}
-    Durability: 7
-    Points: 40
-  - Sprite: {fileID: 21300000, guid: a1e129c98b4c8634483f9441b96e1941, type: 3}
-    Durability: 8
-    Points: 40
-  - Sprite: {fileID: 21300000, guid: 34fe090459819884bbcf194034e89a12, type: 3}
-    Durability: 9
-    Points: 50
-  - Sprite: {fileID: 21300000, guid: 18508f7e45935bd42a8357cb7e0d60a8, type: 3}
-    Durability: 10
-    Points: 60
-  - Sprite: {fileID: 21300000, guid: b7365b82d3aeac8419cce42ae2a03dea, type: 3}
-    Durability: 12
-    Points: 70
-  - Sprite: {fileID: 21300000, guid: c8c7a0e5aeb1dd547a22ff8a89728421, type: 3}
-    Durability: 12
-    Points: 100
-  - Sprite: {fileID: 21300000, guid: 6148c5ea378141f4f9fa3d226a937a82, type: 3}
-    Durability: 15
-    Points: 100
-  - Sprite: {fileID: 21300000, guid: d195fa23aa734fb40bb0f0dffb1f6c30, type: 3}
-    Durability: 15
-    Points: 140
-  AsteroidPrefab: {fileID: 1307012982920104, guid: 986a969e1e6cda64a8535450822bd942,
-    type: 2}
-  AsteroidSpawningTime: 1.5
-  Spawning: 1
+  - {fileID: 1153589344524626, guid: 5742ce0fcd172a84ebf76214a6dc2cd8, type: 2}
+  - {fileID: 1899816520267730, guid: 1b833b1644bcb3841ae0d2a290739bdc, type: 2}
+  - {fileID: 1457662262429612, guid: f516828b8c1e4d743adb7319d0f8f954, type: 2}
+  - {fileID: 1017059899486532, guid: f75a69ffe4491f24d9e355a1853c8e92, type: 2}
+  - {fileID: 1273760233822374, guid: fbddf030b839eb441921ac9ba2997a7e, type: 2}
+  - {fileID: 1704324496266398, guid: 61e1df3a2973f0d4d98d1b6485126352, type: 2}
+  - {fileID: 1140257791472300, guid: ab5287d870fde5e47b4b5bb5e83cfa67, type: 2}
+  - {fileID: 1764314442420676, guid: 2d25566b56b78f349a9d2e36595b18fd, type: 2}
+  - {fileID: 1110367598734970, guid: 263ce3d8b0a9f6d4aab9c48e24f74bb9, type: 2}
+  - {fileID: 1449953486615076, guid: 7999a9717f1592d4bb35b07adfe2db57, type: 2}
+  - {fileID: 1679261256538078, guid: 68445b434853de643886930d3bf0bb40, type: 2}
+  - {fileID: 1866231847582314, guid: 1ad0cd804e760324c8bc505cf181fedb, type: 2}
+  - {fileID: 1976234505810164, guid: 83706c64dcbc97c4a9e68a8f6ff7f926, type: 2}
+  - {fileID: 1965031159557352, guid: 5c81aec20377fef49a6922b7b0f8b750, type: 2}
+  - {fileID: 1845479446319098, guid: 801bd84f8315deb4b9c98e9e17b72dea, type: 2}
+  - {fileID: 1807925049182796, guid: f5e30d990cc38584d945dc92b442cb7e, type: 2}
+  - {fileID: 1677479931337144, guid: e959225771a28ea45b29710525f7ae45, type: 2}
+  - {fileID: 1274922366510704, guid: e08ffbddee2d5d24f82ccdc6873ff382, type: 2}
+  - {fileID: 1156508974823808, guid: 1b297ed5af1f95442930361a1608f625, type: 2}
+  - {fileID: 1164967656538600, guid: cb9fe5aabadb56b46992fd0cfa48ac09, type: 2}
+  AsteroidSpawningTime: 2
+  Spawning: 0

@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1764734653140934}
+  m_RootGameObject: {fileID: 1930115849282858}
   m_IsPrefabAsset: 1
---- !u!1 &1764734653140934
+--- !u!1 &1930115849282858
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4228589298250710}
-  - component: {fileID: 114856869827314160}
+  - component: {fileID: 4916749091303572}
+  - component: {fileID: 114291734123797036}
   m_Layer: 0
   m_Name: AsteroidSpawnerAngled
   m_TagString: Untagged
@@ -27,92 +27,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4228589298250710
+--- !u!4 &4916749091303572
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764734653140934}
+  m_GameObject: {fileID: 1930115849282858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.53, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114856869827314160
+--- !u!114 &114291734123797036
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764734653140934}
+  m_GameObject: {fileID: 1930115849282858}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1da1df14939934f9b194f79647030b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AsteroidTypes:
-  - Sprite: {fileID: 21300000, guid: 78e780a734c7a364cad9f8bdd981fd13, type: 3}
-    Durability: 1
-    Points: 10
-  - Sprite: {fileID: 21300000, guid: 219a59eec08d03746934b34c7c01d28a, type: 3}
-    Durability: 2
-    Points: 15
-  - Sprite: {fileID: 21300000, guid: b3d94329f68bd0f47b511b852bad2507, type: 3}
-    Durability: 3
-    Points: 20
-  - Sprite: {fileID: 21300000, guid: 31a8c955ddcd24246815f45d935a4213, type: 3}
-    Durability: 4
-    Points: 30
-  - Sprite: {fileID: 21300000, guid: 9f0ee4241d73a634daf6cfc156834ac6, type: 3}
-    Durability: 5
-    Points: 40
-  - Sprite: {fileID: 21300000, guid: 57ae4c6c05e7adb40af4c7945ecb3f0a, type: 3}
-    Durability: 6
-    Points: 50
-  - Sprite: {fileID: 21300000, guid: 74e99281f0abc1a49b450f7868656f9c, type: 3}
-    Durability: 10
-    Points: 60
-  - Sprite: {fileID: 21300000, guid: f432c4c2a62afc24e917f46d271f6aca, type: 3}
-    Durability: 10
-    Points: 70
-  - Sprite: {fileID: 21300000, guid: 5550de451cd382541bdc5afb6b5137de, type: 3}
-    Durability: 12
-    Points: 70
-  - Sprite: {fileID: 21300000, guid: 324f1c052216199428cbd7521ab68dd7, type: 3}
-    Durability: 12
-    Points: 80
-  - Sprite: {fileID: 21300000, guid: f0298c99feb087444b36b4b6e35a1b3c, type: 3}
-    Durability: 5
-    Points: 20
-  - Sprite: {fileID: 21300000, guid: ca0c5d0fd38f3fc4b9648271ac73b261, type: 3}
-    Durability: 6
-    Points: 30
-  - Sprite: {fileID: 21300000, guid: a1e129c98b4c8634483f9441b96e1941, type: 3}
-    Durability: 7
-    Points: 40
-  - Sprite: {fileID: 21300000, guid: 808c658a4ab746a4b81b896a6cd0d091, type: 3}
-    Durability: 8
-    Points: 40
-  - Sprite: {fileID: 21300000, guid: 34fe090459819884bbcf194034e89a12, type: 3}
-    Durability: 9
-    Points: 50
-  - Sprite: {fileID: 21300000, guid: 18508f7e45935bd42a8357cb7e0d60a8, type: 3}
-    Durability: 10
-    Points: 60
-  - Sprite: {fileID: 21300000, guid: b7365b82d3aeac8419cce42ae2a03dea, type: 3}
-    Durability: 18
-    Points: 70
-  - Sprite: {fileID: 21300000, guid: c8c7a0e5aeb1dd547a22ff8a89728421, type: 3}
-    Durability: 18
-    Points: 100
-  - Sprite: {fileID: 21300000, guid: 6148c5ea378141f4f9fa3d226a937a82, type: 3}
-    Durability: 21
-    Points: 100
-  - Sprite: {fileID: 21300000, guid: d195fa23aa734fb40bb0f0dffb1f6c30, type: 3}
-    Durability: 21
-    Points: 140
-  AsteroidPrefab: {fileID: 1532394658576098, guid: 4d4cb4787930f9e4288833ee78cbc2f8,
-    type: 2}
+  - {fileID: 1153589344524626, guid: 17ae9c6bad61fe046a7f0a4a1a6823bb, type: 2}
+  - {fileID: 1899816520267730, guid: 9beacd85612210440b2ac4bed0f5aad6, type: 2}
+  - {fileID: 1457662262429612, guid: d026e0b9f195cfd4182a3e436910524e, type: 2}
+  - {fileID: 1017059899486532, guid: 9e409f9ba2c721d49a6f8bca195d2520, type: 2}
+  - {fileID: 1273760233822374, guid: 337d06e1281e29641b9f8f4bace25cde, type: 2}
+  - {fileID: 1704324496266398, guid: 638668ad4eba29a40b3ac37f4fbac049, type: 2}
+  - {fileID: 1140257791472300, guid: cf061561a0cd4fd44887636e3c3cfb21, type: 2}
+  - {fileID: 1764314442420676, guid: 5b3b663b525d38747a1e8c64e39ca563, type: 2}
+  - {fileID: 1110367598734970, guid: 2d0bf177687024643b3f3a8019e2a91e, type: 2}
+  - {fileID: 1449953486615076, guid: c2f978d2b89f24c4a8347d33fccdc37f, type: 2}
+  - {fileID: 1679261256538078, guid: f4774a7b28c14a145b48f5f7804af37b, type: 2}
+  - {fileID: 1866231847582314, guid: d8dd0b08668442345af0a5222cd370cd, type: 2}
+  - {fileID: 1976234505810164, guid: 3e3d6065b9b524a4ab192ba27cb38b6b, type: 2}
+  - {fileID: 1965031159557352, guid: a1442030f5e928f4b9594036d700fe3f, type: 2}
+  - {fileID: 1845479446319098, guid: ac2232275edf46149894d6ad370e6bd1, type: 2}
+  - {fileID: 1807925049182796, guid: 3c44d453a91ac504b8f3054f76bb91a0, type: 2}
+  - {fileID: 1677479931337144, guid: 732873ba735a821478006ecfd9b53fd3, type: 2}
+  - {fileID: 1274922366510704, guid: 87729ab3c7f93a049806a439fdad8773, type: 2}
+  - {fileID: 1156508974823808, guid: 84933162575b29248a39b7b7f7148e5b, type: 2}
+  - {fileID: 1164967656538600, guid: 6560a46ee6dc27d4c9a36e41ca72e6e3, type: 2}
   AsteroidSpawningTime: 3
   Spawning: 1

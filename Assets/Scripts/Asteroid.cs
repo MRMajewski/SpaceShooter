@@ -6,16 +6,12 @@ using EZCameraShake;
 [System.Serializable]
 public class AsteroidType
 {
-    public Sprite Sprite;
-  //  public PolygonCollider2D PolygonCollider;
-    public float Durability;
-
-    public int Points = 5;
+    public GameObject AsteroidPrefab;
 
 }
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Collider2D))]
+//[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 
 public class Asteroid : MonoBehaviour {
@@ -39,7 +35,10 @@ public class Asteroid : MonoBehaviour {
     [SerializeField]
     float AngleMax = 0f;
 
-    private int Points;
+    [SerializeField]
+    int Points=10;
+
+    private GameObject AsteroidPrefab;
 
     private SpriteRenderer SpriteRenderer;
 
@@ -57,11 +56,8 @@ public class Asteroid : MonoBehaviour {
 
     public void Configure(AsteroidType asteroidType)
     {
-        GetComponent<SpriteRenderer>().sprite = asteroidType.Sprite;
-       
-        Durability = asteroidType.Durability;
+        AsteroidPrefab = asteroidType.AsteroidPrefab;
 
-        Points = asteroidType.Points;
     }
 
     public void SetSpeed()

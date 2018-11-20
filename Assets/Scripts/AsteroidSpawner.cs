@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour
 {
-    [SerializeField]
-    AsteroidType[] AsteroidTypes;
+   // [SerializeField]
+  //  AsteroidType[] AsteroidTypes;
 
     [SerializeField]
-    GameObject AsteroidPrefab;
+    GameObject[] AsteroidTypes;
+
 
     [SerializeField]
     public float AsteroidSpawningTime = 2f;
@@ -19,13 +20,13 @@ public class AsteroidSpawner : MonoBehaviour
 
     public bool Spawning = true;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         AsteroidTypeLevel = 0;
-        AsteroidTypeRange = 3;
+        AsteroidTypeRange = 2;
 
         StartCoroutine(SpawningCoroutine());
-	}
+    }
 
     IEnumerator SpawningCoroutine()
     {
@@ -35,33 +36,37 @@ public class AsteroidSpawner : MonoBehaviour
 
         while (true)//nieskończona pętla zapewnia że korutyna się nie skończy
         {
-            while(Spawning)//sprawdzamy czy asteroidy mają być generowane
+            while (Spawning)//sprawdzamy czy asteroidy mają być generowane
             {
                 SpawnAsteroid();
                 yield return new WaitForSeconds(AsteroidSpawningTime);
 
 
             }
-            
+
             yield return new WaitForEndOfFrame();//czekamy do następnej klatki żeby nie obciążać cpu
 
         }
     }
 
-    private AsteroidType GetRandomAsteroidType()  //pobieramy z tablicy indeks asteroidy
+    private int GetRandomAsteroidType()  //pobieramy z tablicy indeks asteroidy
     {
-        var index = AsteroidTypeLevel + Random.Range(-AsteroidTypeRange,AsteroidTypeRange);
+        var index = AsteroidTypeLevel + Random.Range(-AsteroidTypeRange, AsteroidTypeRange);
         index = Mathf.Clamp(index, 0, AsteroidTypes.Length - 1); //upewniamy się że index nie wyjdzie poza zakres
 
-        return AsteroidTypes[index];
+        return index;
     }
+
 
     private void SpawnAsteroid()
     {
-        var obj = Instantiate(AsteroidPrefab, transform.position, Quaternion.identity);
+
+        
+
+        var obj = Instantiate(AsteroidTypes[GetRandomAsteroidType()], transform.position, Quaternion.identity);
         obj.transform.position += Vector3.right * Random.Range(-2f, 2f);
 
-        var asteroidType = GetRandomAsteroidType(); 
-        obj.GetComponent<Asteroid>().Configure(asteroidType); //konfigurujemy asteroide
+        //var asteroidType = GetRandomAsteroidType(); 
+      //  obj.GetComponent<Asteroid>().Configure(asteroidType); //konfigurujemy asteroide
     }
 }
